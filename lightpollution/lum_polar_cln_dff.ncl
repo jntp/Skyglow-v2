@@ -1,5 +1,5 @@
-load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
-load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+; load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+; load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
 
 begin
 
@@ -52,11 +52,10 @@ begin
   res@cnLineLabelsOn = True ;-- turn on contour line labels
   res@cnLineLabelInterval = 1 ;-- increase line labels
   res@cnFillPalette = newColors ;-- set color map
-  res@cnLinesOn = True ;-- keep contour lines 
+  res@cnLinesOn = True ;-- keep contour lines
   ; res@cnLevelSelectionMode = "ExplicitLevels"
   ; res@cnLevels = (/-60, -50, -40, -30, -25, -20, -10, 0, 10/)
 
   ;** Make the plot
-  plot = gsn_csm_contour(wks, percentage, res) ;-- draw a contour plot 
-
+  plot = gsn_csm_contour(wks, percentage, res) ;-- draw a contour plot
 end
